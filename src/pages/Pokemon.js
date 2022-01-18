@@ -8,7 +8,7 @@ const Pokemon = () => {
     getPokemonDetails(params?.pokemonName).then(({ data }) => {
       setPokemonDetails(data);
     });
-  }, []);
+  });
   return (
     <div
       style={{
@@ -27,6 +27,7 @@ const Pokemon = () => {
           pokemonDetails?.sprites?.other?.dream_world?.front_default ||
           pokemonDetails?.sprites?.other?.["official-artwork"]?.front_default
         }
+        alt="pokemon"
       />
       <span style={{ marginBottom: "10px", marginTop:'10px'}}>
         <b>Type:</b>
